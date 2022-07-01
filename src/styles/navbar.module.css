@@ -1,0 +1,30 @@
+.navbar {
+    min-height: 12vh;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(1, 1, 53);
+}
+
+.navbar .logo {
+    margin-left: 5rem;
+}
+
+.navbar .logo h2 {
+    color: white;
+}
+
+.navbar .menus {
+    margin-right: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: orangered; */
+}
+
+.navbar .menus a {
+    text-decoration: none;
+    color: white;
+    margin: 0 0.5rem;
+}
