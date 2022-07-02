@@ -30,3 +30,11 @@
 .home table td {
     text-align: center;
 }
+
+.home table td .editbtn:hover {
+    color: orange;
+}
+
+.home table td .deletebtn:hover {
+    color: red;
+}
