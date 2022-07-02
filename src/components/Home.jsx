@@ -62,10 +62,10 @@ const Home = () => {
                         <tr key={d._id}>
                             <td ><IconButton className={styles.editbtn} onClick={(e)=> onEdit(e,d._id,d.name,d.email,d.phone,d.domain)}><EditIcon /></IconButton></td>
                             <td ><IconButton className={styles.deletebtn} onClick={(e)=> onDelete(e,d._id)}><DeleteIcon /></IconButton></td>
-                            <td>{d.name}</td>
-                            <td>{d.email}</td>
-                            <td>+91{d.phone}</td>
-                            <td>{d.domain}</td>
+                            <td><p>{d.name}</p></td>
+                            <td><p>{d.email}</p></td>
+                            <td><p>+91{d.phone}</p></td>
+                            <td><p>{d.domain}</p></td>
                         </tr>
                     );
                 })}

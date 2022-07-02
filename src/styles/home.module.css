@@ -1,10 +1,9 @@
 .home {
     min-height: 88vh;
-    min-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: pink; */
 }
 
 .home .head {
@@ -19,7 +18,6 @@
 .home table {
     width: 60%;
     border-collapse: collapse;
-    /* border: 0.1rem solid #010135; */
 }
 
 .home table th, .home table td {
@@ -31,10 +29,50 @@
     text-align: center;
 }
 
+.home table td p {
+    width: 100%;
+    margin: auto;
+    word-wrap: break-word;
+}
+
 .home table td .editbtn:hover {
     color: orange;
 }
 
 .home table td .deletebtn:hover {
     color: red;
+}
+
+/* Mobile Devices */
+@media only screen and (max-width: 480px) {
+    .home table {
+        width: 100%;
+    }
+
+    .home table th {
+        padding: 0.05rem;
+    }
+
+    .home table td {
+        padding: 0;
+    }
+
+    .home table td p {
+        width: 60%;
+    }
+}
+
+/* Tablet Devices */
+@media only screen and (min-width: 481px) and (max-width: 720px) {
+    .home table {
+        width: 80%;
+    }
+
+    .home table th, .home table td {
+        padding: 0.2rem;
+    }
+
+    .home table td p {
+        width: 80%;
+    }
 }
