@@ -33,6 +33,7 @@ const Navbar = () => {
             {user && <h3><Link to='/'>Home</Link></h3>}
             {user && <h3><Link to='/profile'>Profile</Link></h3>}
             {!user && <h3><Link to='/login'>Login</Link></h3>}
+            {!user && <h3><Link to='/register'>Register</Link></h3>}
             {user && <h3><Link to='#' onClick={onLogout}>Logout</Link></h3>}
           </div>}
         </div>
@@ -41,6 +42,7 @@ const Navbar = () => {
             {user && <h3><Link to='/'>Home</Link></h3>}
             {user && <h3><Link to='/profile'>Profile</Link></h3>}
             {!user && <h3><Link to='/login'>Login</Link></h3>}
+            {!user && <h3><Link to='/register'>Register</Link></h3>}
             {user && <h3><Link to='#' onClick={onLogout}>Logout</Link></h3>}
         </div>
     </div>

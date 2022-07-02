@@ -31,7 +31,7 @@ export const register = ({name,email,phone,password})=> async(dispatch)=> {
         dispatch({
             type: "register",
             payload: {
-                error: error
+                error: error.message
             }
         });
     }
