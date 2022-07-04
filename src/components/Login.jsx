@@ -47,6 +47,7 @@ const Login = () => {
         <div className={styles.form}>
             <input type="email" name='email' value={userDetails.email} onChange={onValueChange} placeholder="Email Address" />
             <input type="password" name='password' value={userDetails.password} onChange={onValueChange} placeholder="Password" />
+            {error && <p style={{color: "red", textAlign: "center"}}>{error}</p>}
             <button onClick={onLogin}>Login</button>
         </div>
     </div>
