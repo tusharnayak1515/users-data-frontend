@@ -10,6 +10,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const {user} = useSelector(state=> state.userReducer,shallowEqual);
   const [userDetails, setUserDetails] = useState({email: "", password: ""});
+  const [error, setError] = useState();
 
   const onValueChange = (e)=> {
     const { name, value } = e.target;
@@ -19,8 +20,20 @@ const Login = () => {
 
   const onLogin = (e)=> {
     e.preventDefault();
-    dispatch(actionCreators.login(userDetails));
-    setUserDetails({email: "", password: ""});
+    if(userDetails.email.match("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")
+     && userDetails.password.trim().length !== 0) 
+     {
+       dispatch(actionCreators.login(userDetails));
+       setUserDetails({name: "", email: "", phone: "", password: ""});
+     }
+     else {
+      if(!userDetails.email.match("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")) {
+        setError("Enter a valid email!");
+      }
+      else {
+        setError("Password must contain atleast 1 uppercase, 1 lowercase, 1 special character, and 1 number!");
+      }
+     }
   }
     
   useEffect(()=> {
